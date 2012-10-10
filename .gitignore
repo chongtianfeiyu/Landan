@@ -5,8 +5,33 @@
 
 # Compiled Dynamic libraries
 *.so
+*.so.*
+*.dll
+*.dylib
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+
+# Build Files
+*.ilk
+*.pdb
+*.tlog
+*.intermediate.manifest
+*.lastbuildstate
+*.log
+*.obj
+*.idb
+*.ipch
+*.user
+*.suo
+*.sdf
+*.opensdf
