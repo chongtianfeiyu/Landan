@@ -84,11 +84,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\src\landan\application\BasicApplication.h" />
+    <ClInclude Include="..\..\..\..\src\landan\application\config\ApplicationConfig.h" />
+    <ClInclude Include="..\..\..\..\src\landan\application\IApplication.h" />
+    <ClInclude Include="..\..\..\..\src\landan\application\WindowedApplication.h" />
+    <ClInclude Include="..\..\..\..\src\landan\core\ApplicationScaffold.h" />
     <ClInclude Include="..\..\..\..\src\landan\core\Landan.h" />
     <ClInclude Include="..\..\..\..\src\landan\core\LandanTypes.h" />
+    <ClInclude Include="..\..\..\..\src\landan\file\File.h" />
+    <ClInclude Include="..\..\..\..\src\landan\timer\Timer.h" />
+    <ClInclude Include="..\..\..\..\src\landan\util\ByteArray.h" />
+    <ClInclude Include="..\..\..\..\src\landan\util\DebugUtil.h" />
+    <ClInclude Include="..\..\..\..\src\landan\util\EndianUtil.h" />
+    <ClInclude Include="..\..\..\..\src\landan\util\Function.h" />
+    <ClInclude Include="..\..\..\..\src\landan\window\SystemWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\landan\application\BasicApplication.cpp" />
+    <ClCompile Include="..\..\..\..\src\landan\application\config\ApplicationConfig.cpp" />
+    <ClCompile Include="..\..\..\..\src\landan\application\WindowedApplication.cpp" />
+    <ClCompile Include="..\..\..\..\src\landan\core\ApplicationScaffold.cpp" />
     <ClCompile Include="..\..\..\..\src\landan\core\LandanTypes.cpp" />
+    <ClCompile Include="..\..\..\..\src\landan\file\File.cpp" />
+    <ClCompile Include="..\..\..\..\src\landan\timer\Timer.cpp" />
+    <ClCompile Include="..\..\..\..\src\landan\util\ByteArray.cpp" />
+    <ClCompile Include="..\..\..\..\src\landan\util\DebugUtil.cpp" />
+    <ClCompile Include="..\..\..\..\src\landan\window\SystemWindow.cpp" />
     <ClCompile Include="..\..\..\..\src\Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

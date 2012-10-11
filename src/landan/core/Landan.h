@@ -41,6 +41,11 @@
 //core
 #include <landan/core/LandanTypes.h>
 
+//application - config
+#include <landan/application/config/ApplicationConfig.h>
+
+
+
 
 
 #endif /* _LANDAN_H_ */

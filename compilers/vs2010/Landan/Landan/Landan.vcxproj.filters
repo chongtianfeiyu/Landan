@@ -7,8 +7,26 @@
     <Filter Include="src\landan">
       <UniqueIdentifier>{78828f16-89ad-4c39-b7ca-acbb1f667f94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\landan\application">
+      <UniqueIdentifier>{f511b335-ae48-49df-90cd-c179db120a1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\landan\application\config">
+      <UniqueIdentifier>{9b975049-5562-4f8a-941f-64b667482599}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\landan\core">
       <UniqueIdentifier>{b8ca2545-310c-44d9-b163-50a58650e0ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\landan\file">
+      <UniqueIdentifier>{e3ea3b56-47da-42ce-9ccc-73f0c5763abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\landan\timer">
+      <UniqueIdentifier>{1d8b8515-ee53-4bf0-abee-49e07d7ffdd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\landan\util">
+      <UniqueIdentifier>{dc37499e-564c-4846-a836-abb4f8468447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\landan\window">
+      <UniqueIdentifier>{2714517b-ac8e-408a-b173-d285cc55346d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -18,6 +36,42 @@
     <ClInclude Include="..\..\..\..\src\landan\core\LandanTypes.h">
       <Filter>src\landan\core</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\core\ApplicationScaffold.h">
+      <Filter>src\landan\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\application\BasicApplication.h">
+      <Filter>src\landan\application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\application\IApplication.h">
+      <Filter>src\landan\application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\application\WindowedApplication.h">
+      <Filter>src\landan\application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\application\config\ApplicationConfig.h">
+      <Filter>src\landan\application\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\file\File.h">
+      <Filter>src\landan\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\window\SystemWindow.h">
+      <Filter>src\landan\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\util\ByteArray.h">
+      <Filter>src\landan\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\util\DebugUtil.h">
+      <Filter>src\landan\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\util\EndianUtil.h">
+      <Filter>src\landan\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\util\Function.h">
+      <Filter>src\landan\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\landan\timer\Timer.h">
+      <Filter>src\landan\timer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\src\landan\core\LandanTypes.cpp">
@@ -25,6 +79,33 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\Main.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\core\ApplicationScaffold.cpp">
+      <Filter>src\landan\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\application\BasicApplication.cpp">
+      <Filter>src\landan\application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\application\WindowedApplication.cpp">
+      <Filter>src\landan\application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\application\config\ApplicationConfig.cpp">
+      <Filter>src\landan\application\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\file\File.cpp">
+      <Filter>src\landan\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\window\SystemWindow.cpp">
+      <Filter>src\landan\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\util\ByteArray.cpp">
+      <Filter>src\landan\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\util\DebugUtil.cpp">
+      <Filter>src\landan\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\landan\timer\Timer.cpp">
+      <Filter>src\landan\timer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
