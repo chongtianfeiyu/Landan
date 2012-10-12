@@ -3,18 +3,19 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir>$(SolutionDir)..\..\..\build\bin\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir>$(SolutionDir)..\..\..\build\bin\Tests_$(Configuration)_$(Platform)\</OutDir>
   </PropertyGroup>
   <PropertyGroup>
-    <IntDir>$(SolutionDir)..\..\..\build\obj\$(Configuration)_$(Platform)\</IntDir>
+    <IntDir>$(SolutionDir)..\..\..\build\obj\Tests_$(Configuration)_$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup>
     <TargetName>$(ProjectName)</TargetName>
-    <IncludePath>$(SolutionDir)..\..\..\src;$(IncludePath)</IncludePath>
-    <SourcePath>$(SolutionDir)..\..\..\src;$(SourcePath)</SourcePath>
+    <IncludePath>$(SolutionDir)..\..\..\..\gtest-1.6.0\include;$(SolutionDir)..\..\..\src_tests;$(SolutionDir)..\..\..\src;$(IncludePath)</IncludePath>
+    <SourcePath>$(SolutionDir)..\..\..\src_tests;$(SourcePath)</SourcePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <BuildLogFile>$(SolutionDir)..\..\..\build\bin\$(Configuration)_$(Platform)\$(MSBuildProject)</BuildLogFile>
+    <BuildLogFile>$(SolutionDir)..\..\..\build\bin\Tests_$(Configuration)_$(Platform)\$(MSBuildProject)</BuildLogFile>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -37,24 +38,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development|Win32'">
-    <ClCompile>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <TreatWarningAsError>true</TreatWarningAsError>
-      <MultiProcessorCompilation>false</MultiProcessorCompilation>
-      <PreprocessorDefinitions>LANDAN_DEVELOPMENT;LANDAN_DEBUG;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <Optimization>Disabled</Optimization>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <IntrinsicFunctions>false</IntrinsicFunctions>
-      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
-      <OmitFramePointers>false</OmitFramePointers>
-      <WholeProgramOptimization>false</WholeProgramOptimization>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\build\bin\$(Configuration)_$(Platform);$(SolutionDir)..\..\..\..\gtest-1.6.0\msvc\gtest-md\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Landan_d.lib;gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -73,6 +59,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>false</GenerateDebugInformation>
+	  <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\build\bin\$(Configuration)_$(Platform);$(SolutionDir)..\..\..\..\gtest-1.6.0\msvc\gtest-md\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Landan.lib;gtest.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />

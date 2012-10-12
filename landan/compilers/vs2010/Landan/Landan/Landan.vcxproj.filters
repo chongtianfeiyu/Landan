@@ -77,9 +77,6 @@
     <ClCompile Include="..\..\..\..\src\landan\core\LandanTypes.cpp">
       <Filter>src\landan\core</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\src\Main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\src\landan\core\ApplicationScaffold.cpp">
       <Filter>src\landan\core</Filter>
     </ClCompile>

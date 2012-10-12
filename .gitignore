@@ -35,3 +35,6 @@
 *.suo
 *.sdf
 *.opensdf
+
+# GTest
+gtest-1.6.0/

@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Landan", "Landan\Landan.vcxproj", "{B4713F1A-A6F2-4373-8DC8-9B91DFD2A977}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LandanTests", "LandanTests\LandanTests.vcxproj", "{371CC911-FC07-427E-9387-128B594DAC86}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B4713F1A-A6F2-4373-8DC8-9B91DFD2A977} = {B4713F1A-A6F2-4373-8DC8-9B91DFD2A977}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -16,6 +21,12 @@ Global
 		{B4713F1A-A6F2-4373-8DC8-9B91DFD2A977}.Development|Win32.Build.0 = Development|Win32
 		{B4713F1A-A6F2-4373-8DC8-9B91DFD2A977}.Release|Win32.ActiveCfg = Release|Win32
 		{B4713F1A-A6F2-4373-8DC8-9B91DFD2A977}.Release|Win32.Build.0 = Release|Win32
+		{371CC911-FC07-427E-9387-128B594DAC86}.Debug|Win32.ActiveCfg = Debug|Win32
+		{371CC911-FC07-427E-9387-128B594DAC86}.Debug|Win32.Build.0 = Debug|Win32
+		{371CC911-FC07-427E-9387-128B594DAC86}.Development|Win32.ActiveCfg = Debug|Win32
+		{371CC911-FC07-427E-9387-128B594DAC86}.Development|Win32.Build.0 = Debug|Win32
+		{371CC911-FC07-427E-9387-128B594DAC86}.Release|Win32.ActiveCfg = Release|Win32
+		{371CC911-FC07-427E-9387-128B594DAC86}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
