@@ -3,6 +3,10 @@ Landan
 
 Landan is a C++ Framework inspired by the Flash/AIR API to allow you to create applications natively. Initially it will target Windows Desktop but may be extended for other operating systems or mobile platforms.
 
+Disclaimer
+======
+
+Many aspects of this project will change over time and it is not recommended for any usuage other than personal interest at this point.
 
 Installation
 ======
