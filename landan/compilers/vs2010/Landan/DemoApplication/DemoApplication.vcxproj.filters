@@ -4,10 +4,30 @@
     <Filter Include="src_demo_app">
       <UniqueIdentifier>{55d941f6-8256-4162-aac8-69a655a2b037}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src_demo_app\apps">
+      <UniqueIdentifier>{bb0369f7-e387-4741-b451-884386ce3a2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\src_demo_app\Main.cpp">
       <Filter>src_demo_app</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\src_demo_app\apps\SimpleBasicApplication.cpp">
+      <Filter>src_demo_app\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src_demo_app\apps\SimpleWindowedApplication.cpp">
+      <Filter>src_demo_app\apps</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\src_demo_app\apps\SimpleBasicApplication.h">
+      <Filter>src_demo_app\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src_demo_app\apps\SimpleWindowedApplication.h">
+      <Filter>src_demo_app\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src_demo_app\apps\Apps.h">
+      <Filter>src_demo_app\apps</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -84,7 +84,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\src_demo_app\apps\SimpleBasicApplication.cpp" />
+    <ClCompile Include="..\..\..\..\src_demo_app\apps\SimpleWindowedApplication.cpp" />
     <ClCompile Include="..\..\..\..\src_demo_app\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\src_demo_app\apps\Apps.h" />
+    <ClInclude Include="..\..\..\..\src_demo_app\apps\SimpleBasicApplication.h" />
+    <ClInclude Include="..\..\..\..\src_demo_app\apps\SimpleWindowedApplication.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
