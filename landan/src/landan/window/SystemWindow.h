@@ -92,7 +92,7 @@ namespace landan {
 
 	//PUBLIC FUNCTIONS
 	public:
-		SystemWindow(tstring title, u32 x = 0, u32 y = 0, u32 width = 800, u32 height = 600, window::WINDOW_TYPE type = window::APPLICATION);
+		SystemWindow(string title, u32 x = 0, u32 y = 0, u32 width = 800, u32 height = 600, window::WINDOW_TYPE type = window::APPLICATION);
 		~SystemWindow();
 
 		bool Init();
@@ -118,7 +118,7 @@ namespace landan {
 	//PRIVATE VARIABLES
 	private:
 		
-		tstring m_title;
+		string m_title;
 
 		u32 m_x;
 		u32 m_y;
@@ -141,7 +141,7 @@ namespace landan {
 		static const LONG_PTR GWL_EXSTYLE_WINDOWED = WS_EX_OVERLAPPEDWINDOW;
 		static const LONG_PTR GWL_EXSTYLE_FULLSCREEN = WS_EX_TOPMOST;
 
-		static const tstring WINDOW_CLASS_NAME;
+		static const string WINDOW_CLASS_NAME;
 		#endif
 
 

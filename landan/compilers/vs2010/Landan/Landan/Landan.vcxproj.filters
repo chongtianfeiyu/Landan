@@ -28,6 +28,9 @@
     <Filter Include="src\landan\window">
       <UniqueIdentifier>{2714517b-ac8e-408a-b173-d285cc55346d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\nowide">
+      <UniqueIdentifier>{0c13b3ea-2457-48c3-b709-44af06c2d7f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\src\landan\core\Landan.h">
@@ -74,9 +77,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\src\landan\core\LandanTypes.cpp">
-      <Filter>src\landan\core</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\src\landan\core\ApplicationScaffold.cpp">
       <Filter>src\landan\core</Filter>
     </ClCompile>
@@ -103,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\landan\timer\Timer.cpp">
       <Filter>src\landan\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\nowide_standalone\src\iostream.cpp">
+      <Filter>src\nowide</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

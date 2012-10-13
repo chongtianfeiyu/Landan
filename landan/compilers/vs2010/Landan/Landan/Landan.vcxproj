@@ -100,11 +100,11 @@
     <ClInclude Include="..\..\..\..\src\landan\window\SystemWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\nowide_standalone\src\iostream.cpp" />
     <ClCompile Include="..\..\..\..\src\landan\application\BasicApplication.cpp" />
     <ClCompile Include="..\..\..\..\src\landan\application\config\ApplicationConfig.cpp" />
     <ClCompile Include="..\..\..\..\src\landan\application\WindowedApplication.cpp" />
     <ClCompile Include="..\..\..\..\src\landan\core\ApplicationScaffold.cpp" />
-    <ClCompile Include="..\..\..\..\src\landan\core\LandanTypes.cpp" />
     <ClCompile Include="..\..\..\..\src\landan\file\File.cpp" />
     <ClCompile Include="..\..\..\..\src\landan\timer\Timer.cpp" />
     <ClCompile Include="..\..\..\..\src\landan\util\ByteArray.cpp" />

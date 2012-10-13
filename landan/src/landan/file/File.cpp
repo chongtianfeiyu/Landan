@@ -36,6 +36,7 @@ or implied, of Karman Interactive Ltd.
 
 
 #include "File.h"
+#include <nowide/fstream.hpp>
 #include <landan/util/ByteArray.h>
 
 //////////////////////////////////////////////////////////////////////
@@ -48,7 +49,7 @@ namespace landan {
 	// CONSTRUCTORS //////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////
 
-	File::File(tstring path) : m_path(path) {
+	File::File(string path) : m_path(path) {
 
 	}
 
@@ -66,16 +67,16 @@ namespace landan {
 
 	bool File::Exists()
 	{
-		tfstream fileStream(m_path.c_str());
+		nowide::fstream fileStream(m_path.c_str());
 		return (fileStream != 0);
 	}
 
 	void File::WriteBytes(ByteArray &bytes)
 	{
-		tfstream fileStream(m_path.c_str(), tofstream::binary | tofstream::out);
+		nowide::fstream fileStream(m_path.c_str(), nowide::ofstream::binary | nowide::ofstream::out);
 		if (fileStream)
 		{
-			fileStream.write(reinterpret_cast<tchar*>(bytes.GetRawBytes()), bytes.GetLength());
+			fileStream.write(reinterpret_cast<char*>(bytes.GetRawBytes()), bytes.GetLength());
 			fileStream.flush();
 		}
 	}

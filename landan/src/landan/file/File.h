@@ -66,7 +66,7 @@ namespace landan {
 
 	//PUBLIC FUNCTIONS
 	public:
-		File(tstring path);
+		File(string path);
 		~File();
 
 		bool Exists();
@@ -80,7 +80,7 @@ namespace landan {
 
 	//PRIVATE VARIABLES
 	private:
-		tstring m_path;
+		string m_path;
 
 	
 	};

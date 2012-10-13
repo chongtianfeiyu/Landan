@@ -12,8 +12,8 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
 	<TargetName Condition="'$(Configuration)|$(Platform)'=='Development|Win32'">$(ProjectName)_dm</TargetName>
 	<TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
-    <IncludePath>$(SolutionDir)..\..\..\src;$(IncludePath)</IncludePath>
-    <SourcePath>$(SolutionDir)..\..\..\src;$(SourcePath)</SourcePath>
+    <IncludePath>$(SolutionDir)..\..\..\..\nowide_standalone;$(SolutionDir)..\..\..\src;$(IncludePath)</IncludePath>
+    <SourcePath>$(SolutionDir)..\..\..\..\nowide_standalone\src;$(SolutionDir)..\..\..\src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <BuildLogFile>$(SolutionDir)..\..\..\build\bin\$(Configuration)_$(Platform)\$(MSBuildProject)</BuildLogFile>

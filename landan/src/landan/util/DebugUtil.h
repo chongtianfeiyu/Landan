@@ -44,6 +44,7 @@ or implied, of Karman Interactive Ltd.
 //////////////////////////////////////////////////////////////////////
 
 #include <landan/core/LandanTypes.h>
+#include <sstream>
 
 //////////////////////////////////////////////////////////////////////
 // MACROS ////////////////////////////////////////////////////////////
@@ -52,21 +53,16 @@ or implied, of Karman Interactive Ltd.
 
 #ifndef NDEBUG
 
-
-#define __TFILE__ LT(__FILE__)
-#define __TFUNCTION__ LT(__FUNCTION__)
-
-
 #define LOG_ERROR(message) \
-	landan::DebugUtil::PrepLogStream(LT("ERROR"), __TFILE__, __TFUNCTION__, __LINE__); \
+	landan::DebugUtil::PrepLogStream("ERROR", __FILE__, __FUNCTION__, __LINE__); \
 	landan::DebugUtil::LOGSTREAM << message << std::endl; \
 	landan::DebugUtil::DeployLogStream();
 #define LOG_DEBUG(message) \
-	landan::DebugUtil::PrepLogStream(LT("DEBUG"), __TFILE__, __TFUNCTION__, __LINE__); \
+	landan::DebugUtil::PrepLogStream("DEBUG", __FILE__, __FUNCTION__, __LINE__); \
 	landan::DebugUtil::LOGSTREAM << message << std::endl; \
 	landan::DebugUtil::DeployLogStream();
 #define LOG_INFO(message) \
-	landan::DebugUtil::PrepLogStream(LT("INFO"), __TFILE__, __TFUNCTION__, __LINE__); \
+	landan::DebugUtil::PrepLogStream("INFO", __FILE__, __FUNCTION__, __LINE__); \
 	landan::DebugUtil::LOGSTREAM << message << std::endl; \
 	landan::DebugUtil::DeployLogStream();
 #else
@@ -91,12 +87,12 @@ namespace landan {
 
 		//PUBLIC FUNCTIONS
 		public:
-			static void PrepLogStream(const tchar *type, const tchar *file, const tchar *function, const unsigned long line);
+			static void PrepLogStream(const char *type, const char *file, const char *function, const unsigned long line);
 			static void DeployLogStream();
 
 		//PUBLIC VARIABLES
 		public:
-			static tostringstream LOGSTREAM;
+			static std::ostringstream LOGSTREAM;
 	
 	};
 

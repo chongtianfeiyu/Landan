@@ -39,15 +39,16 @@ or implied, of Karman Interactive Ltd.
 #ifndef _LANDANTYPES_H_
 #define _LANDANTYPES_H_
 
+//Always ensure _UNICODE is defined as per UTF8 instructions on http://www.utf8everywhere.org/
+#ifndef _UNICODE
+define _UNICODE
+#endif
+
 //////////////////////////////////////////////////////////////////////
 // INCLUDES //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 #include <string>
-#include <iostream>
-#include <sstream>
-#include <fstream>
-
 
 //////////////////////////////////////////////////////////////////////
 // NAMESPACE /////////////////////////////////////////////////////////
@@ -55,6 +56,9 @@ or implied, of Karman Interactive Ltd.
 
 namespace landan
 {
+
+	typedef std::string string;
+
 
 //Visual Studio Compiler
 #if defined(_MSC_VER)
@@ -94,45 +98,6 @@ namespace landan
 
 
 #endif
-
-
-#ifdef UNICODE
-	typedef wchar_t tchar;
-
-	#define	LT(txt) _LT(txt)
-	#define _LT(txt) L##txt
-#else
-	//Characters, Strings, Streams
-	typedef char tchar;
-
-	//All Landan String Literals should be wrapped in this
-	#define	LT(txt)	_LT(txt)
-	#define _LT(txt) txt
-#endif
-
-
-	typedef std::basic_filebuf<tchar> tfilebuf;
-	typedef std::basic_fstream<tchar> tfstream;
-	typedef std::basic_ifstream<tchar> tifstream;
-	typedef std::basic_ios<tchar> tios;
-	typedef std::basic_iostream<tchar> tiostream;
-	typedef std::basic_istream<tchar> tistream;
-	typedef std::basic_istringstream<tchar> tistringstream;
-	typedef std::basic_ofstream<tchar> tofstream;
-	typedef std::basic_ostream<tchar> tostream;
-	typedef std::basic_ostringstream<tchar> tostringstream;
-	typedef std::basic_streambuf<tchar> tstreambuf;
-	typedef std::basic_string<tchar> tstring;
-	typedef std::basic_stringbuf<tchar> tstringbuf;
-	typedef std::basic_stringstream<tchar> tstringstream;
-
-	extern tostream& tcout;
-	extern tistream& tcin;
-	extern tostream& tcerr;
-	extern tostream& tclog;
-
-
-
 
 }
 

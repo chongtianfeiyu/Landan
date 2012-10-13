@@ -35,6 +35,8 @@ or implied, of Karman Interactive Ltd.
 //////////////////////////////////////////////////////////////////////
 
 #include "DebugUtil.h"
+#include <nowide/convert.hpp>
+#include <iostream>
 
 #ifdef _WIN32
 #include <Windows.h>
@@ -50,13 +52,12 @@ namespace landan {
 	// STATICS ///////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////
 
-	tostringstream DebugUtil::LOGSTREAM;
+	std::ostringstream DebugUtil::LOGSTREAM;
 
 
-	void DebugUtil::PrepLogStream(const tchar* type, const tchar* file, const tchar* function, const unsigned long line) 
+	void DebugUtil::PrepLogStream(const char* type, const char* file, const char* function, const unsigned long line) 
 	{
-
-		tstring formattedFile;
+		string formattedFile;
 		formattedFile.append(file);
 
 		size_t c1 = formattedFile.find_last_of('\\');
@@ -69,15 +70,15 @@ namespace landan {
 
 #ifdef _MSC_VER
 	void DebugUtil::DeployLogStream() {
-		OutputDebugString(DebugUtil::LOGSTREAM.str().c_str());
+		OutputDebugStringW(nowide::widen(DebugUtil::LOGSTREAM.str()).c_str());
 		//Necessary to prevent leaks
-		DebugUtil::LOGSTREAM.str(LT(""));
+		DebugUtil::LOGSTREAM.str("");
 	}
 #else
 	void DebugUtil::DeployLogStream() {
-		tcout << DebugUtil::LOGSTREAM.str() << std::endl;
+		std::cout << DebugUtil::LOGSTREAM.str() << std::endl;
 		//Necessary to prevent leaks
-		DebugUtil::LOGSTREAM.str(LT(""));
+		DebugUtil::LOGSTREAM.str("");
 	}
 #endif
 
